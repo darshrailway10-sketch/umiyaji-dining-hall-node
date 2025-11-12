@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: umiya-dining-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        fromDatabase:
+          name: umiya-dining-mongo
+          property: connectionString
+      - key: FRONTEND_URL
+        value: https://umiyaji-dining-hall-f.onrender.com

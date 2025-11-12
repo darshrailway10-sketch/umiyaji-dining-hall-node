@@ -1,0 +1,40 @@
+{
+  "name": "dining-hall-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Umiya Ji Dining Hall Management System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "mkdir -p dist && cp -r middleware models routes server.js package.json dist/ && echo 'Build completed successfully'",
+    "test": "node test-api.js"
+  },
+  "keywords": [
+    "dining",
+    "hall",
+    "tiffin",
+    "service",
+    "api"
+  ],
+  "author": "Umiya Ji Dining Hall",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "morgan": "^1.10.0",
+    "dotenv": "^16.3.1",
+    "ws": "^8.14.2",
+    "moment": "^2.29.4",
+    "pdfkit": "^0.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "axios": "^1.6.2"
+  }
+}
